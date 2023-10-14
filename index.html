@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First JS Assignment</title>
+    <style>
+        h2{
+            text-align: center;
+            color: blue;
+            text-transform: uppercase;
+            /* font-variant: small-caps; */
+        }
+    </style>
 </head>
 <body>
     <h2>Practice Exercise 1.1</h2>
@@ -13,7 +21,7 @@
     <!-- Try entering your name, using the console.log() syntax -->
     <img src="./2.PNG" alt="">
     <br>
-    <h2>Practice Exercise 1.2</h2>
+    <h2>Practice Exercise 1.2 & 1.3</h2>
     <br>
     <img src="./3.PNG" alt="">
     <img src="./4.PNG" alt="">
@@ -22,9 +30,9 @@
         console.log("Hello World!");
     </script>
     
-    <h1>Practice Exercise 1.4</h1> 
+    <h2>Practice Exercise 1.4</h2> 
 
-    <h2>Self-check quiz</h2>
+    <h4>Self-check quiz</h4>
     <h4>Q: What is the HTML syntax to add an external JavaScript file?</h4>
     <p> <strong>Ans: </strong> &lt;script src="./app.js"&gt;&lt;/script&gt;</p>
     <h4>Q: Can you run JavaScript in a file with a JS extension in your browser?</h4>
@@ -34,8 +42,273 @@
     <h4>Q: What is the best way to remove a line of code from running that you might
         want to keep as you debug?</h4>
     <p><strong>Ans: </strong>For this purpose we can use comments</p>
-    
+    <hr>
 
+    <!-- App2.js -->
+    <!-- Practice exercise 2.1 -->
+    <h1>Chapter - 2</h1>
+    <h2>Practice exercise 2.1</h2>
+    <h4>Q: What are the types of these variables listed below? Verify this with typeof and
+        output the result to the console:</h4>
+    <p> <strong>Answer: <br> </strong>
+    
+    <script>
+            // Practice exercise 2.1
+        let str1 = 'Laurence';
+        console.log(typeof str1);
+        document.write("Type of str1 ('Laurence') is : ",typeof str1, "<br>");
+
+        let str2 = "Svekis";
+        console.log(typeof str2);
+        document.write("Type of str2 ('Svekis') is : ",typeof str2, "<br>");
+
+        let val1 = undefined;
+        console.log(typeof val1);
+        document.write("Type of str2 ('undefined') is : ",typeof val1, "<br>");
+
+        let val2 = null;
+        console.log(typeof val2);
+        document.write("Type of str2 ('null') is : ",typeof val2, "<br>");
+
+        let myNum = 1000;
+        console.log(typeof myNum);
+        document.write("Type of str2 ('myNum') is : ",typeof myNum, "<br>");
+    </script>
+
+
+    <!-- Practice exercise 2.2 -->
+    <h2>Practice exercise 2.2</h2>
+    <h4>Q: Create a variable for your name, another one for your age, and another one for
+        whether you can code JavaScript or not.
+        Log to the console the following sentence, where name, age and true/false are
+        variables:</h4>
+    <p> <strong>Answer: <br> </strong>
+    
+    <script>
+        let name = "Maria";
+        let age = 24;
+        let canYouCode = true;
+        document.write("My name is : " ,name, "<br>");
+        document.write("My age is : " ,age, "<br>");
+        document.write("Am I able to write JavaScript code: ", canYouCode, "<br>");
+    </script>
+
+    <!-- Practice exercise 2.3 -->
+    <h2>Practice exercise 2.3</h2>
+    <h4>Q: Write some code to calculate the hypotenuse of a triangle using the Pythagorean
+        theorem when given the values of the other two sides. The theorem specifies that the
+        relation between the sides of a right-angled triangle is a2+ b2= c2.</h4>
+    <script>
+        // Get values for sides 'a' and 'b' from the user
+        var a = parseFloat(prompt("Enter the length of side 'a':"));
+        var b = parseFloat(prompt("Enter the length of side 'b':"));
+
+        // Check if the input is valid (non-empty and numeric)
+        if (isNaN(a) || isNaN(b)) {
+            console.log("Invalid input. Please enter numeric values for sides 'a' and 'b'.");
+        } else {
+            // Calculate the hypotenuse using the Pythagorean theorem
+        var c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+
+        // Print the result to the console
+        document.write("The length of the hypotenuse (side 'c') is: " + c);
+        }
+
+    </script>
+
+    <!-- Practice exercise 2.4 -->
+    <h2>Practice exercise 2.4</h2>
+    <h4>Q: Create variables for three numbers: a, b, and c. Update these variables with the
+        following actions using the assignment operators:
+        • Add b to a
+        • Divide a by c
+        • Replace the value of c with the modulus of c and b
+        • Print all three numbers to the console
+    </h4>
+    <script>
+        // Initialize variables a, b, and c
+        let A = 10;
+        let B = 5;
+        let C = 3;
+    
+        A += B;        
+        B /= C;        
+        C %= B;       
+    
+        // Print all three numbers to the page
+        document.write("Value of A: " + A + "<br>");
+        document.write("Value of B: " + B + "<br>");
+        document.write("Value of C: " + C + "<br>");
+    </script>
+
+    <!-- Chapter project -->
+    <h2>Chapter project</h2>
+    <h4>Q: Create a variable that contains a value in miles, convert it to kilometers, and log the
+        value in kilometers</h4>
+
+        <script>
+        // Get the distance in miles from the user
+        let miles = parseFloat(prompt("Enter the distance in miles:"));
+
+        // Check if the input is valid (non-empty and numeric)
+        if (isNaN(miles)) {
+            console.log("Invalid input. Please enter a numeric value for distance in miles.");
+        } else {
+            // Conversion factor
+            const milesToKilometers = 1.60934;
+
+            // Convert miles to kilometers
+            let kilometers = miles * milesToKilometers;
+
+            // Log the result in the specified format
+            document.write(`The distance of ${miles} miles is equal to ${kilometers.toFixed(4)} kilometers.`);
+        }
+        </script>
+
+        <!-- BMI calculator -->
+        <h2>BMI calculator</h2>
+        <h4>Q: Set values for height in inches and weight in pounds, then convert the values to
+            centimeters and kilos, outputting the results to the console:
+            • 1 inch is equal to 2.54 cm
+            • 2.2046 pounds is equal to 1 kilo
+            Output the results. Then, calculate and log the BMI: this is equal to weight (in kilos)
+            divided by squared height (in meters). Output the results to the console.</h4>
+        <script>
+        let heightInInches = parseFloat(prompt("Enter your height in inches:"));
+
+        let weightInPounds = parseFloat(prompt("Enter your weight in pounds:"));
+
+        const inchesToCentimeters = 2.54;
+        const poundsToKilos = 0.453592;
+
+        let heightInCentimeters = heightInInches * inchesToCentimeters;
+        let weightInKilos = weightInPounds * poundsToKilos;
+
+        document.write(`Height: ${heightInCentimeters} cm<br>`);
+        document.write(`Weight: ${weightInKilos} kg<br>`);
+
+        let heightInMeters = heightInCentimeters / 100; 
+        let bmi = weightInKilos / (heightInMeters ** 2);
+
+        document.write(`BMI: ${bmi}`);
+        </script>
+
+        <!-- Self-check quiz -->
+        <h2>Self-check quiz</h2>
+        <h4>Q: What data type is the following variable? <br>
+             const t1 = "5";</h4>
+        <script>
+            const t1 = "5";
+            document.write("data type of t1 is :"  ,typeof(t1));
+        </script>
+        <h4>What data type is the following variable?<br>
+            const t2 = 91;</h4>
+        <script>
+            const t2 = 91;
+            document.write("data type of t2 is :"  ,typeof(t2));
+        </script>
+
+        <h4>Which one is generally better, line 1 or line 2? <br>
+            let empty1 = undefined; <br>
+            let empty2 = null; </h4>
+            <script>
+             document.write(" the line 2 : \'let empty2 = null\'  is better");   
+            </script>
+
+        <h4>What is the console output for the following?<br>
+            let greet = "Hello"; <br>
+            greet = "world"; <br>
+            console.log(greet);</h4>
+            <script>
+            let greet = "Hello";
+            greet = "world";
+            document.write("The console output of the variable \'greet\' is : ", greet);
+            </script>    
+
+        <h4> What will be logged to the console?
+            let p = "world";<br>
+            let q = `Hello ${p}!`;<br>
+            console.log(q);</h4>
+            <script>
+            let p = "world";
+            let q = `Hello ${p}!`;
+            document.write("The logged will be : " ,q);
+            </script>
+
+        <h4>What is the value of test?
+            let test = "Hello"; <br>
+            test = prompt("world"); <br>
+            console.log(test);</h4>
+
+            <script>
+             let test = "Hello";
+             test = prompt("world");
+             document.write("The value of test is : ", test);
+            </script>
+
+        <h4>What is the value of j output to the console?
+            let i = 5; <br>
+            let j = 70; <br>
+            let k = "5"; <br>
+            j++;
+            console.log(j);</h4>
+
+            <script>
+            let i = 5;
+            let j = 70;
+            let k = "5";
+            j++;
+            document.write("The value of j is : ",j);
+            </script>
+        
+        <h4>. What is the value of result? <br>
+            let result = 3 + 4 * 2 / 8;</h4>
+
+            <script>
+                let result = 3 + 4 * 2 / 8;
+                document.write("The value of result is : ", result);
+            </script>
+        
+        <h4>What is the value of total and total2?
+            let firstNum = 5; <br>
+            let secondNum = 10;<br>
+            firstNum++;<br>
+            secondNum--;
+            let total = ++firstNum + secondNum;<br>
+            console.log(total);<br>
+            let total2 = 500 + 100 / 5 + total--;<br>
+            console.log(total2);</h4>
+
+            <script>
+            let firstNum = 5;
+            let secondNum = 10;
+            firstNum++;
+            secondNum--;
+            let total = ++firstNum + secondNum;
+            document.write("Value of total is : ", total);
+            let total2 = 500 + 100 / 5 + total--;
+            document.write("Value of total2 is : ", total2);
+            </script>
+
+            <h4>What is logged to the console here?
+            const value1 = 5; <br>
+            const value2 = 10;<br>
+            console.log(value1 > 0 && value2 > 0);<br>
+            console.log(value1 == 5 && value2 == 4);<br>
+            console.log(true ||false);<br>
+            console.log(value1 == 3 || value2 == 10);<br>
+            console.log(value1 == 3 || value2 == 7); </h4>
+
+            <script>
+            const value1 = 5;
+            const value2 = 10;
+            document.write("The output of the \'value1 > 0 && value2 > 0'\ is :" , value1 > 0 && value2 > 0 , "<br>");
+            document.write("The output of the \'true ||false'\ is :" , true ||false, "<br>");
+            document.write("The output of the \'value1 == 5 && value2 == 4'\ is :" , value1 == 5 && value2 == 4, "<br>");
+            document.write("The output of the \'value1 == 3 || value2 == 10'\ is :" , value1 == 3 || value2 == 10, "<br>");
+            document.write("The output of the \'value1 == 3 || value2 == 7'\ is :" , value1 == 3 || value2 == 7, "<br>"); 
+            </script>
     <script src="./app.js"></script>
+    <script src="./app2.js"></script>
 </body>
 </html>
